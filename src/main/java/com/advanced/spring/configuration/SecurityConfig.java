@@ -1,5 +1,6 @@
 package com.advanced.spring.configuration;
 
+import com.advanced.spring.core.di.Fruit;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -46,6 +47,7 @@ public class SecurityConfig {
                         (authorize) ->
                                 authorize
                                         .requestMatchers("/api/v1/users/public").permitAll()
+                                        .requestMatchers("/api/v1/fruits/public").permitAll()
                                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults());
@@ -55,11 +57,16 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
+
         UserDetails serhii = User.builder().username("serhii").password(passwordEncoder().encode("serhii@123")).roles("USER")
                 .build();
 
         UserDetails admin = User.builder().username("admin").password(passwordEncoder().encode("admin")).roles("ADMIN")
                 .build();
-        return new InMemoryUserDetailsManager(serhii,admin);
+
+        UserDetails apple = User.builder().username("aplle").password(passwordEncoder().encode("apple@123")).roles("FRUIT")
+                .build();
+
+        return new InMemoryUserDetailsManager(serhii,admin,apple);
     }
 }

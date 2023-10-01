@@ -33,7 +33,7 @@ public class FruitServiceImplements implements FruitService {
 
         Fruit apple = Fruit.builder().build()
                 .id("2")
-                .name("apple ")
+                .name("apple")
                 .email()
                 .build();
 

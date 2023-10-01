@@ -1,9 +1,7 @@
 package com.advanced.spring.controller;
 
 import com.advanced.spring.core.di.Fruit;
-import com.advanced.spring.core.di.Student;
 import com.advanced.spring.service.FruitService;
-import com.advanced.spring.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
