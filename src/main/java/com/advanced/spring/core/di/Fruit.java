@@ -48,7 +48,4 @@ public class Fruit {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public void AssociationOverride id(String number) {
-    }
 }
