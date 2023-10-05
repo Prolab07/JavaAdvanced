@@ -28,6 +28,7 @@ public class Flora implements Serializable{
         private String email;
         private String name;
         private String password;
+
         @ManyToMany
         @JoinTable(
                 name = "flora_roles", schema = "advanced_robot_dreams",

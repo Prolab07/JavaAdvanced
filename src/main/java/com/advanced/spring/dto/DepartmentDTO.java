@@ -12,6 +12,7 @@ import java.util.List;
 @ToString
 public class DepartmentDTO {
 
+
     private Long id;
     private String name;
     private List<UserDTO> users;

@@ -22,6 +22,7 @@ import java.util.List;
 @Scope("prototype")
 public class Department implements Serializable {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

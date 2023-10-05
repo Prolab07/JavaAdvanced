@@ -50,6 +50,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    //@Column - колонки, якщо треба додаткова валидация
     private String email;
     private String name;
     private String password;
